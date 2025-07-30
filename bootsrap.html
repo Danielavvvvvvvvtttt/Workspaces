@@ -6,73 +6,85 @@
   <title>Cirugías Médicas</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .carousel-img-small {
+      height: 220px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container mt-5">
   <h1 class="text-center mb-4">🏥 Tipos de Cirugías Médicas</h1>
 
-  <!-- Acordeón -->
-  <div class="accordion" id="surgeryAccordion">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="surgeryOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-          1. Cirugía General
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#surgeryAccordion">
-        <div class="accordion-body">
-          Se encarga de operaciones comunes como apendicitis, hernias o vesículas. Es la base quirúrgica de muchos hospitales.
+  <div class="row">
+    <!-- Columna izquierda: Acordeón -->
+    <div class="col-md-6">
+      <div class="accordion" id="surgeryAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="surgeryOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              1. Cirugía General
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#surgeryAccordion">
+            <div class="accordion-body">
+              Se encarga de operaciones comunes como apendicitis, hernias o vesículas. Es la base quirúrgica de muchos hospitales.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="surgeryTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              2. Cirugía Plástica
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#surgeryAccordion">
+            <div class="accordion-body">
+              Busca mejorar la apariencia o reparar lesiones. Incluye procedimientos reconstructivos y estéticos.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="surgeryThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              3. Cirugía Cardiaca
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#surgeryAccordion">
+            <div class="accordion-body">
+              Se realiza sobre el corazón o vasos sanguíneos. Es común en casos de enfermedades coronarias graves.
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="surgeryTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-          2. Cirugía Plástica
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#surgeryAccordion">
-        <div class="accordion-body">
-          Busca mejorar la apariencia o reparar lesiones. Incluye procedimientos reconstructivos y estéticos.
+    <!-- Columna derecha: Carrusel -->
+    <div class="col-md-6">
+      <div id="surgeryCarousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="11.jpg" class="d-block w-100 carousel-img-small" alt="Cirugía general">
+          </div>
+          <div class="carousel-item">
+            <img src="44.jpg" class="d-block w-100 carousel-img-small" alt="Cirugía plástica">
+          </div>
+          <div class="carousel-item">
+            <img src="descarga.jpg" class="d-block w-100 carousel-img-small" alt="Cirugía cardíaca">
+          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="surgeryThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-          3. Cirugía Cardiaca
+        <button class="carousel-control-prev" type="button" data-bs-target="#surgeryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
         </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#surgeryAccordion">
-        <div class="accordion-body">
-          Se realiza sobre el corazón o vasos sanguíneos. Es común en casos de enfermedades coronarias graves.
-        </div>
+        <button class="carousel-control-next" type="button" data-bs-target="#surgeryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
     </div>
-  </div>
-
-  <!-- Carrusel de imágenes médicas ya visibles -->
-  <div id="surgeryCarousel" class="carousel slide mt-5">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="11.jpg" class="d-block w-100" alt="Cirugía general">
-      </div>
-      <div class="carousel-item">
-        <img src="descarga.jpg" class="d-block w-100" alt="Cirugía plástica">
-      </div>
-      <div class="carousel-item">
-        <img src="44.jpg" class="d-block w-100" alt="Cirugía cardíaca">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#surgeryCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#surgeryCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
   </div>
 </div>
 
@@ -80,3 +92,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
